@@ -1,0 +1,156 @@
+
+@font-face {
+    font-family: Glamour;
+    src: url('fonts/Glamour.ttf');
+}
+
+@font-face {
+    font-family: Crima;
+    src: url('fonts/Crima.ttf');
+}
+body { 
+    font-family: Crima;
+    text-align: center; 
+    font-size: 1.2em;
+    color: #682134;
+    margin: 0;
+    overflow-x: hidden;
+} 
+
+h1{
+    font-family: Glamour;
+    text-align: center;
+    font-size: 4em;
+    line-height: 1em;
+}
+
+
+
+.header {
+    padding: 60px;
+    text-align: center;
+    background: #e7a1c7;
+    color: white;
+    font-size: 30px;
+  }
+
+  .navbar,
+  .dropdown-menu {
+      background-color: #ffffe4;
+  }
+  
+  .navbar-nav .nav-link,
+  .dropdown-menu .dropdown-item,
+  .navbar .nav-item.dropdown.active .nav-link{
+      background-color: #ffffe4;
+      color: #a73453;
+  }
+  
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link:active,
+  .navbar .nav-item.dropdown:hover .nav-link {
+      background-color: #ffffe4;
+      color: #682134;
+  }
+  
+.container{
+    padding: 2rem;
+}
+
+.slider-wrapper{
+    position: relative;
+    max-width:48rem;
+    margin: 0 auto;
+
+}
+
+.slider{
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align:start;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+}
+
+.slider-nav{
+    display:flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left:50%;
+    transform: translateX(-50%);
+    z-index:1;
+}
+
+.slider-nav a{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover{
+    opacity: 1;
+}
+
+.shop-now {
+    text-align: center;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.btn.btn-lg.active[aria-pressed="true"] {
+    background-color: #e7a1c7; 
+    color: #fff; 
+    border-color: #e7a1c7; 
+}
+
+.btn.btn-lg.active[aria-pressed="true"]:hover,
+.btn.btn-lg.active[aria-pressed="true"]:focus {
+    background-color: #d385ad; 
+    border-color: #d385ad;
+    color: #fff; 
+}
+  
+footer {
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    /* Additional styles for the footer */
+    background-color: #d385ad; 
+    min-height: 4em; /* Adjust height as needed */
+    font-size: 2em;
+}
+  
+.instagram a,
+.depop a,
+.tiktok a {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    text-decoration: none; /* Remove underline from link */
+    color: #fff; /* Change link color */
+}
+
+footer p {
+    margin-right: 2em; /* Adjust this value to increase or decrease space */
+    align-items: center;
+}
+
+  
+.copyright{
+    
+    font-size:0.5em;
+    color: #fff;
+}
