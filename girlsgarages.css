@@ -13,7 +13,7 @@ body {
     text-align: center; 
     font-size: 1.2em;
     color: #682134;
-    margin: 0;
+    
     overflow-x: hidden;
 } 
 
@@ -22,6 +22,11 @@ h1{
     text-align: center;
     font-size: 4em;
     line-height: 1em;
+}
+
+h2{
+    margin-top:2em;
+    margin-bottom: 2em;
 }
 
 
@@ -135,30 +140,45 @@ h1{
     color: #fff; 
 }
   
-footer {
-    margin-top:2em;
-    display: flex;
-    justify-content: center; /* Horizontally center content */
-    align-items: center; /* Vertically center content */
-    /* Additional styles for the footer */
-    background-color: #d385ad; 
-    min-height: 4em; /* Adjust height as needed */
-    font-size: 2em;
-}
   
+
 .instagram a,
 .depop a,
-.tiktok a {
+.tiktok a{
     margin-left:0.5em;
-    display: flex;
-    align-items: center; /* Align items vertically */
+    display: inline-flex;
+    align-items: center;
     text-decoration: none; /* Remove underline from link */
-    color: #fff; /* Change link color */
+    color: #fff; 
+}
+.purchase a {
+    margin-left: 0.5em;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #682134; 
+
+    
+}
+
+.purchase img {
+    margin-left: 0.5em; /* Add space between text and logo */
+    
 }
 
 footer p {
-    margin-right: 2em; /* Adjust this value to increase or decrease space */
+    margin-right: 2em; 
     align-items: center;
+}
+
+footer {
+    margin-top:2em;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: #d385ad; 
+    min-height: 4em; 
+    font-size: 2em;
 }
 
   
@@ -179,17 +199,65 @@ footer p {
     border-width: 2px;
 }
 
-.drop1-header{
-    margin-top:2em;
+.drop1-header
+{
+    max-width: 100%;
+    background-color: #ffffe4;
+    color:#a73453;
+    
 }
+.drop1-header a{
+    color:#a73453;
+  
+}
+
 
 .items img{
     margin-top: 2em;
-    max-width: 70%;
-    max-height: 70%;
+    max-width: 65%;
+    max-height: 65%;
     filter: drop-shadow(20px 10px 4px rgb(214, 147, 184));
+    margin-left:0.5em;
+    margin-right: 0.5em;
+
     
 }
+.items img:hover{
+    margin-top: 1em;
+    margin-right: 2em;
+    max-width: 100%;
+    max-height: 100%;
+    filter: drop-shadow(20px 10px 4px rgb(214, 147, 184));
+    transform:scale(1, 1); 
+    
+}
+
+#la-mariposa-azul:hover {
+    max-width: 100%;
+    max-height: 100%;
+    filter: drop-shadow(20px 10px 4px rgb(214, 147, 184));
+
+    transform:scale(0.94,1); 
+}
+
+#rosette {
+    max-width: 60%; 
+    max-height:60%;
+}
+#rosette:hover {
+    max-width: 65%;
+    max-height: 65%;
+
+    filter: drop-shadow(20px 10px 4px rgb(214, 147, 184));
+    transform:scale(1,1); 
+}
+
+#la-mariposa-azul {
+    max-width: 88%;
+    max-height: 65%;
+}
+
+
 
 .subtitle{
     font-family: serif;
@@ -206,8 +274,78 @@ footer p {
 }
 
 
-#rosette {
-    max-width: 40%; 
-    height: auto;
+
+
+@media screen and (max-width: 768px) {
+    .navbar-nav .nav-link,
+    .dropdown-menu .dropdown-item,
+    .navbar .nav-item.dropdown.active .nav-link {
+        background-color: #ffffe4;
+        color: #a73453;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link:active,
+    .navbar .nav-item.dropdown:hover .nav-link {
+        background-color: #ffffe4;
+        color: #682134;
+    }
 }
 
+.container {
+    padding: 2rem;
+}
+
+/* Responsive Slider Styles */
+@media screen and (max-width: 768px) {
+    .slider {
+        aspect-ratio: 16/9;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        flex-direction: column; 
+    }
+
+    .slider img {
+        flex: 1 0 100%;
+        margin-top: 1em;
+        scroll-snap-align: start;
+        object-fit: cover;
+        width: 100%;
+        height: auto; 
+    }
+}
+
+/* Responsive Footer Styles */
+footer {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d385ad;
+    min-height: 4em;
+    font-size: 2em;
+}
+
+/* Responsive Item Styles */
+.items img {
+    margin-top: 1em;
+    max-width: 100%;
+    max-height: auto; 
+    filter: drop-shadow(20px 10px 4px rgb(214, 147, 184));
+}
+
+
+/* Slide Animation Style */
+* {box-sizing: border-box;}
+
+@keyframes slideInOut {
+    0% {
+        transform: translateX(-100vw); /* Start from the left edge of the viewport */
+    }
+    100% {
+        transform: translateX(0vw); /* Slide to the right and end at the initial position */
+    }
+}
