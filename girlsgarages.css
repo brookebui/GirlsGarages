@@ -27,6 +27,7 @@ h1{
 
 
 .header {
+    margin-top:2em;
     padding: 60px;
     text-align: center;
     background: #e7a1c7;
@@ -34,10 +35,17 @@ h1{
     font-size: 30px;
   }
 
-  .navbar,
-  .dropdown-menu {
-      background-color: #ffffe4;
+  .navbar{
+    background-color: #ffffe4;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
   }
+  .dropdown-menu {
+    background-color: #ffffe4;
+    position: absolute;
+    top: 100%; /* or adjust as needed */
+}
   
   .navbar-nav .nav-link,
   .dropdown-menu .dropdown-item,
@@ -52,6 +60,8 @@ h1{
       background-color: #ffffe4;
       color: #682134;
   }
+
+
   
 .container{
     padding: 2rem;
@@ -76,6 +86,7 @@ h1{
 
 .slider img{
     flex: 1 0 100%;
+    margin-top:2em;
     scroll-snap-align:start;
     object-fit: cover;
     width: 100%;
@@ -125,6 +136,7 @@ h1{
 }
   
 footer {
+    margin-top:2em;
     display: flex;
     justify-content: center; /* Horizontally center content */
     align-items: center; /* Vertically center content */
@@ -137,6 +149,7 @@ footer {
 .instagram a,
 .depop a,
 .tiktok a {
+    margin-left:0.5em;
     display: flex;
     align-items: center; /* Align items vertically */
     text-decoration: none; /* Remove underline from link */
@@ -154,3 +167,47 @@ footer p {
     font-size:0.5em;
     color: #fff;
 }
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url(
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(231, 161, 199)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+    margin-left:1em;
+    border-color: rgb(231, 161, 199);
+    border-width: 2px;
+}
+
+.drop1-header{
+    margin-top:2em;
+}
+
+.items img{
+    margin-top: 2em;
+    max-width: 70%;
+    max-height: 70%;
+    filter: drop-shadow(20px 10px 4px rgb(214, 147, 184));
+    
+}
+
+.subtitle{
+    font-family: serif;
+    font-size: 17px;
+}
+
+.price{
+    font-family:'serif';
+}
+
+.subheading{
+    margin-top: 1em;
+    font-family: Glamour;
+}
+
+
+#rosette {
+    max-width: 40%; 
+    height: auto;
+}
+
