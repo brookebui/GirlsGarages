@@ -13,9 +13,14 @@ body {
     text-align: center; 
     font-size: 1.2em;
     color: #682134;
-    
     overflow-x: hidden;
+    margin-bottom: 4em;
 } 
+
+html{
+    position: relative;
+    min-height: 100%;
+}
 
 h1{
     font-family: Glamour;
@@ -33,40 +38,46 @@ h2{
 
 .header {
     margin-top:2em;
-    padding: 60px;
+    width:100%;
+    box-sizing: border-box;
     text-align: center;
     background: #e7a1c7;
     color: white;
+    padding: 2em;
     font-size: 30px;
   }
 
-  .navbar{
+.header a{
+color: white;
+text-decoration: none;
+}
+
+.navbar{
     background-color: #ffffe4;
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
-  }
-  .dropdown-menu {
+    width: 100%; 
+}
+.dropdown-menu {
     background-color: #ffffe4;
     position: absolute;
-    top: 100%; /* or adjust as needed */
+    top: 100%; 
+    border-color:#a73453; 
 }
-  
-  .navbar-nav .nav-link,
-  .dropdown-menu .dropdown-item,
-  .navbar .nav-item.dropdown.active .nav-link{
-      background-color: #ffffe4;
-      color: #a73453;
-  }
-  
-  .navbar-nav .nav-link:hover,
-  .navbar-nav .nav-link:active,
-  .navbar .nav-item.dropdown:hover .nav-link {
-      background-color: #ffffe4;
-      color: #682134;
-  }
 
+.navbar-nav .nav-link,
+.dropdown-menu .dropdown-item,
+.navbar .nav-item.dropdown.active .nav-link{
+    background-color: #ffffe4;
+    color: #a73453;
+}
 
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:active,
+.navbar .nav-item.dropdown:hover .nav-link {
+    background-color: #ffffe4;
+    color: #682134;
+}
   
 .container{
     padding: 2rem;
@@ -94,7 +105,7 @@ h2{
     margin-top:2em;
     scroll-snap-align:start;
     object-fit: cover;
-    width: 100%;
+    max-width: 100%;
     height: 100%;
 
 }
@@ -124,7 +135,7 @@ h2{
 
 .shop-now {
     text-align: center;
-    margin-top: 20px; /* Adjust as needed */
+    margin-top: 20px;
 }
 
 .btn.btn-lg.active[aria-pressed="true"] {
@@ -139,7 +150,6 @@ h2{
     border-color: #d385ad;
     color: #fff; 
 }
-  
   
 
 .instagram a,
@@ -166,24 +176,31 @@ h2{
     
 }
 
-footer p {
-    margin-right: 2em; 
+#content{
+    min-height: calc(100vh - 8em); /* Adjusted min-height to leave space for the footer */
+    padding-bottom: 4em;
+}
+
+#footer p {
+    margin-top:1em;
     align-items: center;
 }
 
-footer {
-    margin-top:2em;
+
+#footer {
+    position:absolute;
+    bottom: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center; 
-    background-color: #d385ad; 
-    min-height: 4em; 
+    align-items: center;
+    background-color: #d385ad;
     font-size: 2em;
+    height:4em;
+
 }
 
-  
 .copyright{
-    
     font-size:0.5em;
     color: #fff;
 }
@@ -208,14 +225,12 @@ footer {
 }
 .drop1-header a{
     color:#a73453;
-  
 }
-
 
 .items img{
     margin-top: 2em;
-    max-width: 65%;
-    max-height: 65%;
+    max-width: 70%;
+    max-height: 70%;
     filter: drop-shadow(20px 10px 4px rgb(214, 147, 184));
     margin-left:0.5em;
     margin-right: 0.5em;
@@ -225,20 +240,14 @@ footer {
 .items img:hover{
     margin-top: 1em;
     margin-right: 2em;
-    max-width: 100%;
+    max-width: 90%;
     max-height: 100%;
     filter: drop-shadow(20px 10px 4px rgb(214, 147, 184));
     transform:scale(1, 1); 
     
 }
 
-#la-mariposa-azul:hover {
-    max-width: 100%;
-    max-height: 100%;
-    filter: drop-shadow(20px 10px 4px rgb(214, 147, 184));
 
-    transform:scale(0.94,1); 
-}
 
 #rosette {
     max-width: 60%; 
@@ -251,13 +260,6 @@ footer {
     filter: drop-shadow(20px 10px 4px rgb(214, 147, 184));
     transform:scale(1,1); 
 }
-
-#la-mariposa-azul {
-    max-width: 88%;
-    max-height: 65%;
-}
-
-
 
 .subtitle{
     font-family: serif;
@@ -274,32 +276,53 @@ footer {
 }
 
 
+@media screen and (max-width: 767px) {
 
+    /* Responsive Header Styles */
 
-@media screen and (max-width: 768px) {
-    .navbar-nav .nav-link,
-    .dropdown-menu .dropdown-item,
-    .navbar .nav-item.dropdown.active .nav-link {
-        background-color: #ffffe4;
-        color: #a73453;
+    h1{
+        font-size:70px;
+    }
+    
+    h4{
+        font-size:17px;
     }
 
-    .navbar-nav .nav-link:hover,
-    .navbar-nav .nav-link:active,
-    .navbar .nav-item.dropdown:hover .nav-link {
-        background-color: #ffffe4;
-        color: #682134;
+    img{
+        max-width: 100%;
+        height: auto; 
     }
-}
+    .header {
+        max-width:100%;
+        padding: calc(20px + 1.5625vw);
+    }
 
-.container {
-    padding: 2rem;
-}
+    /* Responsive Footer Styles */
+    #footer {
 
-/* Responsive Slider Styles */
-@media screen and (max-width: 768px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #d385ad;
+        font-size: 25px;
+    } 
+
+    /* Responsive Content Styles */
+    #content{
+        min-height: calc(100vh - 8em); /* Adjusted min-height to leave space for the footer */
+        padding-bottom: 3em;
+    
+    }
+
+    #star{
+        max-width:40%;
+        max-height:40%;
+    }
+
+    /* Responsive Slider Styles */
+
     .slider {
-        aspect-ratio: 16/9;
+        aspect-ratio: 4/3;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
@@ -309,34 +332,43 @@ footer {
     }
 
     .slider img {
+        border-radius: 0.5rem;
         flex: 1 0 100%;
         margin-top: 1em;
         scroll-snap-align: start;
         object-fit: cover;
-        width: 100%;
-        height: auto; 
+        max-width: 100%;
+        height: 100%; 
     }
-}
 
-/* Responsive Footer Styles */
-footer {
-    margin-top: 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #d385ad;
-    min-height: 4em;
-    font-size: 2em;
-}
 
-/* Responsive Item Styles */
-.items img {
-    margin-top: 1em;
-    max-width: 100%;
-    max-height: auto; 
-    filter: drop-shadow(20px 10px 4px rgb(214, 147, 184));
-}
+    /* Responsive Item Styles */
+    .items img {
+        margin-top: 1em;
+        max-width: 85%;
+        max-height: auto; 
+        filter: drop-shadow(16px 10px 4px rgb(214, 147, 184));
+    }
 
+    .row{
+        flex-direction: column;
+    }
+    .col{
+        width: 100%;
+    }
+
+    #rosette {
+        max-width: 85%; 
+        max-height:auto;
+    }
+    #rosette:hover {
+        max-width: 90%;
+        max-height: 100%;
+        filter: drop-shadow(20px 10px 4px rgb(214, 147, 184));
+        transform:scale(1,1); 
+    }
+
+}
 
 /* Slide Animation Style */
 * {box-sizing: border-box;}

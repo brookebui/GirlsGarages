@@ -7,56 +7,61 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="girlsgarages.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/images/gg_logo.JPG">
-    <!-- Option 1: Include in HTML -->
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 <body>
     <div class="header">
-        <h1>Girls Garages</h1>
+        <a href="index.html">
+            <h1>Girls Garages</h1>
+        </a>
     </div>
 
    
-
-    <section class = "container">
-        <div class = "slider-wrapper">
-            <div class = "slider">
-                <img id="slide-1" src = "images/image0.jpeg" />
-                <img id="slide-2" src = "images/image1.jpeg" />
-                <img id="slide-3" src = "images/image2.jpeg" />
-                <img id="slide-4" src = "images/image3.jpeg" />
-                <img id="slide-5" src = "images/image4.jpeg" />
+    <div id = "content">
+        <section class = "container">
+            <div class = "slider-wrapper">
+                <div class = "slider">
+                    <img id="slide-1" src = "images/image0.jpeg" />
+                    <img id="slide-2" src = "images/image1.jpeg" />
+                    <img id="slide-3" src = "images/image2.jpeg" />
+                    <img id="slide-4" src = "images/image3.jpeg" />
+                    <img id="slide-5" src = "images/image4.jpeg" />
+                </div>
+                <div class = "slider-nav">
+                    <a href = "#slide-1"></a>
+                    <a href = "#slide-2"></a>
+                    <a href = "#slide-3"></a>
+                    <a href = "#slide-4"></a>
+                    <a href = "#slide-5"></a>
+                </div>
             </div>
-            <div class = "slider-nav">
-                <a href = "#slide-1"></a>
-                <a href = "#slide-2"></a>
-                <a href = "#slide-3"></a>
-                <a href = "#slide-4"></a>
-                <a href = "#slide-5"></a>
+            <div class="shop-now">
+                <a href="drop-no1.html" class="btn btn-lg active" role="button" aria-pressed="true">Shop Now</a>
+            </div>
+        </section>
+
+        <div class="star-container">
+            <div class="row">
+            <div class="col">
+                <img id = "star" src = "images/star.jpg"/>
+                <h4>Black-Owned Business</h4>
+            </div>
+            <div class="col">
+                <img id = "star" src = "images/star.jpg"/>
+            <h4>Handmade With Love</h4>
+            </div>
+            <div class="col">
+                <img id = "star" src = "images/star.jpg"/>
+            <h4>One-Year Warranty</h4>
             </div>
         </div>
-        <div class="shop-now">
-            <a href="drop-no1.html" class="btn btn-lg active" role="button" aria-pressed="true">Shop Now</a>
-        </div>
-    </section>
+    </div>
+    
 
-    <div class="star-container">
-  <div class="row">
-    <div class="col">
-        <img id = "star" src = "images/star.jpg"/>
-        <h4>Black-Owned Business</h4>
-    </div>
-    <div class="col">
-        <img id = "star" src = "images/star.jpg"/>
-      <h4>Handmade With Love</h4>
-    </div>
-    <div class="col">
-        <img id = "star" src = "images/star.jpg"/>
-      <h4>One-Year Warranty</h4>
-    </div>
-  </div>
-</div>
 
-<footer>
+
+<div id = "footer">
     <p class="instagram">
       <a href="https://www.instagram.com/girlsgarages">
         <img src="images/instagram_logo.png" alt="instagram-logo"/>
@@ -79,9 +84,9 @@
     </p>
 
     <p class="copyright">
-        &copy; 2024 Girls Garages. All Rights Reserved.
+        &nbsp; &nbsp; &copy; 2024 Girls Garages. All Rights Reserved.
     </p>
-  </footer>
+</div>
 
   <nav class="navbar navbar-expand-lg">
     <button class="navbar-toggler ml-auto custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
